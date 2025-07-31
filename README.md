@@ -1,30 +1,26 @@
-# Vectorscope Visualizer
+# OpenGL GLFW Example
 
-This project is a prototype stereo XY vectorscope built with C++17 for the backend and React for the frontend. The components communicate using WebSockets. Rendering is done with OpenGL and GLSL shaders.
+This repository contains a minimal C++17 application that opens a window using GLFW and clears the screen each frame with OpenGL. The project is designed to build with package managers like **vcpkg**, **MSYS2** or the standard packages available on Linux distributions.
 
 ## Folder Layout
 
 - `src/` — C++ source code
-- `src/shaders/` — Vertex and fragment shaders
-- `frontend/` — React application
 - `build/` — Generated binaries
+
+## Requirements
+- C++17 compiler
+- CMake 3.10+
+- `glfw` and OpenGL development libraries
 
 ## Building
 
-### Requirements
-- C++17 compiler
-- CMake 3.10+
-- `glfw` and `boost` installed on the system
-- Node.js (for the React frontend)
-
-### Linux / macOS
 ```bash
-./scripts/build_and_run.sh
+cmake -B build -S .
+cmake --build build
 ```
 
-### Windows
-```cmd
-scripts\\build_and_run.bat
-```
+Run the executable:
 
-This will build the backend and start the React development server.
+```bash
+./build/opengl_window
+```
