@@ -1,0 +1,4 @@
+# Build and runtime files
+/build
+/frontend/node_modules
+.vscode
